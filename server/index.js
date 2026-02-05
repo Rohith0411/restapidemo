@@ -3,12 +3,14 @@ import express from "express"
 import cors from "cors"
 import bodyParser from "body-parser";
 import dotenv from "dotenv"
-// import route from "./routes/"
+import route from "./router/UserRoute.js"
 
 const app =express()
 app.use(bodyParser.json())
 app.use(cors())
 dotenv.config()
+
+app.use("/api",route)
 
 const PORT =process.env.PORT || 8976
 const MONGOURL =process.env.MONGO_URL
