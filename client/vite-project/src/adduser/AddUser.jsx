@@ -14,7 +14,7 @@ function AddUser() {
         setUser({...user, [name]:value })
     }
     const submitForm =(e)=>{
-        e.preventDefault()
+        // e.preventDefault()
         console.log(user)
         axios.post("http://localhost:8976/api/user",user).then((res)=>{
             console.log(res)
